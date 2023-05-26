@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://westbreizh.github.io/click-raquette/",
+  "homepage": "https://westbreizh.github.io/click_and_raquette/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
