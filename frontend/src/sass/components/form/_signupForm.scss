@@ -1,0 +1,165 @@
+/* -------------------  formulaire header ----------------------*/
+
+.form-signup{
+
+
+    &__header{
+        width: 100%;
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+        
+        &__link-home{
+            display: flex;
+            align-items: center;
+            width:100%;
+            color: $colour-seventh;
+            font-size: 1.6rem;
+            text-decoration: none;
+            transition: all 150ms;
+            margin-left: 3rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+            &__button-backward{
+                margin-left: -5px;
+                font-size: 2.5rem !important;
+            }
+
+        &__h1{
+            font-size: 3rem;
+             font-weight: bold;
+             margin: auto;
+             text-align: center;
+             margin-top: 3rem;
+        }
+
+
+        &::after{
+            cursor: default;
+            content: "";
+            width: 7rem;
+            height: 4px;
+            display: block;
+            margin: auto;
+            margin-top: 15px;
+            background-color: #2030ab;
+        }
+        
+    }
+
+    &__littleBitText{
+        font-weight: 500;
+        font-family: "Gilroy",sans-serif;
+        text-align: center;
+        margin: auto;
+        font-size: 1.7rem;
+    }
+
+}
+
+/* -------------------  formulaire champs ----------------------*/
+
+
+.form-signup__field-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.form__signup{
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    margin-bottom: 3rem;
+}
+
+
+.message__error{
+    margin-bottom: 1rem !important;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* -------------------  formulaire bouton ----------------------*/
+
+.buttons-wrapper-signup, .buttons-wrapper-ModalChange{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* -------------------  responsive ----------------------*/
+
+
+@media screen and (max-width: 768px) {
+
+
+
+    .signup-contenair{
+        margin-bottom: 3rem;
+    }
+    .buttons-wrapper-signup, .buttons-wrapper-ModalChange{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .main-signup{
+        width: 100% !important;
+        margin: 0rem;
+    }
+    .form__signup{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+    }
+    .form-signup__header{
+        margin-bottom: 2rem;
+         margin-top: 2rem;
+    }
+    .form-signup__header__h1{
+        font-size: 2rem;
+         margin-top: 2rem;
+    }
+
+    .form-signup__header__link-home{
+        margin-left: 1rem;
+    }
+
+
+}
+
+
+
+
+
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:before {
+    display: none !important;
+}
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:after {
+    display: none !important;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    border:none !important;
+}
+
+.css-q0jhri-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: none !important;
+}
+

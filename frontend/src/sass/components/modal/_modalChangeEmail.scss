@@ -1,0 +1,25 @@
+.modal {
+  
+    &__close-button {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #2f3ba9;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0rem;
+    right: 0.2rem;
+    }
+  
+  &__body-email{
+    display:flex;
+    justify-content: center;
+  }
+
+  &__submit-button-wrapper{
+    width: 80%;
+    max-width: 550px;
+  }
+  
+} 

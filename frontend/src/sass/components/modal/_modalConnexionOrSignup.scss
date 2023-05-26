@@ -1,0 +1,80 @@
+
+.modal__connexion{
+  display: flex;
+  align-items: center;
+}
+
+.submit-wrapper-connexion{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+
+.reset-password-link{
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0rem ;
+  background: none;
+  color: #c85a19;
+  text-decoration: underline;
+  height: 2.5rem;
+  text-align: right;
+  max-width: 43rem;
+  margin-top: 0.5rem;
+  border: none;
+
+  &:hover{
+      color: lighten($color: #c85a19, $amount: 7%);
+      transition-duration: 0.2s;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .nav__modal-toggle{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1.7rem;
+      line-height: 3.2rem;
+      margin-left: 2.5rem;
+      color: $colour-white;
+      text-transform: uppercase;
+    }
+ 
+    .nav__modal-icon{
+      margin-right: 2rem;
+      font-size: 2.5rem !important;
+    }
+
+    .modal__connexion-mobile{
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav__modal-toggle-mobile{
+      display: flex ;
+      flex-direction: column ;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      line-height: 33px;
+      text-align: left;
+      white-space: normal;
+      margin-left: 1.8rem;
+      margin-top: 0.5rem;
+      &:hover{
+        color:yellow;
+        cursor: pointer;
+    }
+
+      }
+   
+      .nav__modal-icon-mobile{
+        margin-right: 0rem;
+        font-size: 2.5rem !important;
+      }
+
+ }

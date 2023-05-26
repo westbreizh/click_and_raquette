@@ -1,0 +1,40 @@
+@mixin shadow-button {
+    box-shadow: 5px 5px 5px rgb(150, 237, 237);
+}
+
+@mixin shadow-button-hover {
+    box-shadow: 4px 4px 4px $colour-hover;
+}
+
+/* -------------------  transition ----------------------*/
+
+@mixin transition-hover {
+    transition-property: all;
+    transition-duration: 0.3s;
+}
+
+@mixin transition-grow{
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 190ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+
+@mixin transition-grow-colorbg-changes{
+    transform: scale(1);
+    transition: transform 200ms, background-color 150ms 50ms;
+    transition-duration: 190ms;
+    &:hover {
+        transform: scale(1.10);
+        background-color: $colour-sixth-light;
+    }
+}
+
+
+
+
+
+

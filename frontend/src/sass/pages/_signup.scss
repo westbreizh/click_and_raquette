@@ -1,0 +1,65 @@
+.main-signup{
+    max-width: $width-max-desktop;
+    margin: auto;
+    width: 80%;
+}
+
+.bg-signup{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100vh + 7rem);
+    margin-bottom: -$height-footer;
+    background: url("/src/assets/balleeffet.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.signup-contenair{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14rem;
+    margin-bottom: 7rem;
+    width:100%;
+    background-color: white;
+    color: $colour-seventh;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+
+}
+
+
+    /* -------------------  Responsive ----------------------*/
+    
+@media screen and (max-width: 768px) {
+
+    .signup-contenair{
+        margin-top: 7rem;
+        margin-bottom: 0rem;
+        border-radius: 0rem;
+    }
+}
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+

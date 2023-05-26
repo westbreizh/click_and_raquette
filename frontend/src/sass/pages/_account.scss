@@ -1,0 +1,259 @@
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:before {
+    display: none !important;
+}
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:after {
+    display: none !important;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    border:none !important;
+    background-color: #ebff00;
+}
+
+.account{
+
+    &__bg{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100vh + 7rem);
+    margin-bottom: -$height-footer;
+    background: url("/src/assets/balleeffet.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+    &__main{
+    max-width: $width-max-desktop;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 80%;
+    }
+
+    &__contenair{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: $colour-seventh;
+    font-size: 1.5rem;
+    padding: 1.5rem 0rem 1.5rem 0rem;  
+    width:100%;
+    border-radius: 1rem;
+    }
+}
+
+/* -------------------   breadcrumb ----------------------*/
+
+
+.account{
+
+    &__breadcrumb-wrapper{
+    margin: 2rem 0;
+    width:100% ; 
+    }
+
+    &__breadcrump{
+        padding: 3px 14px;
+        display: inline;
+        background: #ebff00;
+        margin-bottom: 0;
+        list-style: none;
+        border-radius: 0;
+        & li {
+        font-family: "Gilroy",sans-serif;
+        text-transform: uppercase;
+        color: #151534;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: inline;
+        margin-right: 1rem;
+        }
+    }
+    &__link__breadcrump{
+        color: #151534;
+        text-decoration: none;
+        transition: all 150ms;
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+
+
+/* -------------------   header ----------------------*/
+
+.account{
+
+    &__header{
+        width: 100%;
+        &__link-home{
+            display: flex;
+            align-items: center;
+            width: min-content;
+            color: $colour-seventh;
+            font-size: 1.7rem;
+            text-decoration: none;
+            transition: all 150ms;
+            margin-left: 2.5rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+            &__button-backward{
+                margin-left: -5px;
+                font-size: 2.5rem !important;
+            }
+    }
+    &__header__h1{
+        font-size: 130%;
+         font-weight: bold;
+         margin: 0;
+         margin-top: 1rem;
+         text-transform: uppercase;
+        text-align: center;
+    
+    }
+
+}
+
+/* -------------------  submenu ----------------------*/
+
+.submenu{
+    &__wrapper{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.7rem;
+        margin-left: 2.5rem;
+
+    
+        &::after{
+            content: "";
+            width: 53px;
+            height: 4px;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            background-color: #2030ab;
+        }
+    }
+}
+
+.info-perso{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 2.5rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        color:#555 ;
+    }
+    &__title{
+        flex-basis: 35%;
+        text-transform: uppercase;
+
+    }
+    &__value{
+        text-transform: uppercase;
+        display: inline;
+        margin-right: 2.5rem;
+        overflow-wrap: anywhere;
+    }
+
+}
+
+.info-login{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 2.5rem;
+        font-weight: 700;
+        color:#555 ;
+    }
+    &__title{
+        flex-basis: 35%;
+        text-transform: uppercase;
+    }
+    &__data{
+        display: inline;
+        margin-right: 2.5rem;
+        overflow-wrap: anywhere;
+    }
+    &__button{
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 0rem ;
+        margin-left: 2.5rem;
+        background: none;
+        color: #c85a19;
+        text-decoration: underline;
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+        border:none;
+        &:hover{
+            color: lighten($color: #c85a19, $amount: 7%);
+            transition-duration: 0.2s;
+        }
+    }
+
+}
+
+.submenu__wrapper-profilGamer{
+    margin-top: -1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .account{
+
+        &__main{
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        width: 100%;
+        }
+        &__contenair{
+
+            border-radius: 0rem;
+            }
+
+        &__breadcrumb-wrapper{
+            margin: 2rem 1rem;
+            }
+    }
+
+
+}
+
+
+    
+
+
+
+
+
+
+
+
+

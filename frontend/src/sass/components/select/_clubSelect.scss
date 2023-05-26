@@ -1,0 +1,129 @@
+
+.clubSelect{
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bar-wrapper{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #e7e4e4 !important;
+    min-height: 4.4rem;
+    border-radius: 1.5rem !important;
+    border: none !important;
+    font-size: 1.7rem;
+    overflow-wrap: break-word;
+    font-weight: bolder;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__bar-title{
+  margin-left: 1.5rem;
+  }
+
+  &__arrow {
+    display: inline-block;
+    margin-right: 2rem;
+    width: 0;
+    height: 0;
+    margin-left: 1rem;
+    vertical-align: middle;
+    border-top: 0.7rem solid #333;
+    border-right: 0.7rem solid transparent;
+    border-left: 0.7rem solid transparent;
+    color: #1c166c;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__arrow-down{
+    transform: rotate(0deg);
+  }
+
+  &__arrow-up{
+    transform: rotate(180deg);
+  }
+
+  &__submenu-contenair{
+    width: 100%;
+    min-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1.5rem;
+    border-top: none;
+    color: #1c166c;
+    overflow-y: auto;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+
+  &__submenu-ul{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__submenu-li{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 1.5rem;
+    font-size: 1.7rem;
+  }
+  
+  &__submenu-li:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.li-choose-string{
+  width: 100%;
+  text-decoration: none;
+  color: #1c166c;
+}
+
+
+.scrollable-menu {
+  max-height: 25rem; 
+  overflow-y: auto;
+}
+
+
+
+/* -------------------  Responsive ----------------------*/
+
+@media screen and (max-width: 700px) {
+
+  .checkboxSelects__wrapper{
+  justify-content: center;
+  }
+
+
+}
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  

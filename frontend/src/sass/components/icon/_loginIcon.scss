@@ -1,0 +1,37 @@
+.icon-login__wrapper{
+    height: $height-header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+    min-width:8rem;
+    color: $colour-white;
+    &:hover{
+        color: yellow;
+        cursor: pointer;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+   .icon-login__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    margin-left: 2.5rem;
+    color: $colour-white;
+    text-transform: uppercase;
+   }
+
+   .navBar__icon{
+    margin-right: 2rem;
+    font-size: 2.7rem !important;
+}   
+
+}

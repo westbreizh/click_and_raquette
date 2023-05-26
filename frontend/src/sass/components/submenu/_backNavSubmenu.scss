@@ -1,0 +1,37 @@
+.submenuMobile{
+    &__wrapper-back{
+        background-color: rgb(3, 51, 95);
+        display:flex;
+        align-items: center;
+        &:hover{
+            color: yellow;
+            cursor: pointer;
+        }
+
+    }
+    &__bubble-back{
+        display: flex;
+        align-items: center;
+        border: 2px solid;
+        border-radius: 50%;
+        margin: 1rem;
+        margin-left: 2rem;
+    }
+    &__icon-back{
+        font-size: 2.2rem !important;
+        margin: 0.3rem;
+
+        font-weight: 900 !important;
+        
+    }
+    &__text-back{
+        text-transform: uppercase;  
+        margin-left: 1rem;
+        font-size: 1.8rem !important;
+
+    }
+
+}
+    
+    
+   

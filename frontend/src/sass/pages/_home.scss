@@ -1,0 +1,227 @@
+.main-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: $width-max-desktop;
+    margin-top: $height-header;
+}
+
+
+.presentation {  
+    &__h1 {
+        font-weight: 900;
+        font-size: 3.5rem;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    &__h2 {
+        font-weight: 900;
+        font-size: 3rem;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 4rem;
+        margin-top: 0rem;
+    }
+}
+
+
+.functionning{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 8rem;
+
+    &__button, &__button-animate{
+        flex-basis: 25%;
+        max-width: 31rem;
+        min-width: 28rem;
+        padding-right: 1.7rem;
+        display: flex;
+        align-items: center;
+        border-radius: 1rem;
+        background-color: $colour-fourth;
+        color: $colour-primary-light;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__bubble{
+        width: 3.5rem;
+        min-width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: $colour-primary;
+        color: white;
+        margin-left: -1.75rem;
+        margin-right: 1.5rem;
+        display: flex;
+        justify-content: center;
+        font-weight: bolder;
+        font-size: 1.8rem;
+    }
+
+    &__link{
+        text-decoration: none;
+        @include transition-hover;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    &__h3{
+        margin: 0rem;
+    }
+}
+
+ .functionning-icon-tennis,  .functionning-icon-computer{
+        color: $colour-primary-light;
+        font-size: 3rem !important;
+        margin-right: 2rem;
+
+    }
+    .functionning__button-animate:hover{
+
+    .functionning-icon-tennis{
+        animation-name: raquette-playing1;
+        animation-duration: 1s;
+        }
+
+    .functionning-icon-computer{
+        animation-name: computer-grow;
+        animation-duration: 1s;
+        }
+    }
+
+
+
+.servicesLinks{
+
+    padding-bottom: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+
+
+    &__card {
+        flex-basis: 35%;
+        position: relative;
+        @include transition-hover;
+        &:hover{
+            img{
+            transform: scale(1.03);
+            }
+        }
+    }      
+
+    img{
+        @include transition-hover;
+        height: 22rem;
+        width: 100%;
+        max-width: 40rem;
+        border-radius: 1.5rem;
+        object-fit:cover;
+    }
+
+    &__card-text{
+        color: $colour-primary;
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 142.6%;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 35%;  /* position the top  edge of the element at the middle of the parent */
+        transform: translate(0%, -50%); /* This is a shorthand of
+                                             translateX(-50%) and translateY(-50%) */
+    }
+}
+
+
+         /* -------------------  Responsive ----------------------*/
+
+@media screen and (max-width: 1000px) {
+
+    .presentation {  
+        &__h1 {
+        margin-top: 2rem;
+        }
+    
+        &__h2 {
+        margin-bottom: 2rem;
+        }
+    }
+
+
+
+    .functionning{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+        &__button-animate{
+            margin-bottom: 1.8rem;
+        }
+    } 
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .presentation {  
+        &__h1 {
+            font-size:3rem ;
+        }
+    
+        &__h2 {
+            font-size:2.5rem ;
+        }
+    }
+
+    .servicesLinks{
+        flex-direction: column;
+        align-items: center ;
+        padding-bottom: 1rem;
+
+        &__card {
+            width: 85%;
+            margin-bottom: 2.5rem;
+            }      
+    
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .presentation {  
+        &__h1 {
+            font-size:2.2rem ;
+        }
+    
+        &__h2 {
+            font-size:2rem ;
+        }
+    }
+
+
+
+    .functionning{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+        &__button-animate{
+            margin-bottom: 1.8rem;
+        }
+    } 
+
+
+}
+
+
+

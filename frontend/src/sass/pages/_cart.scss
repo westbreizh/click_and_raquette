@@ -1,0 +1,275 @@
+.cart{
+
+  &__main{
+    max-width: $width-max-desktop;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+    
+  &__bg{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100vh + 7rem);
+    margin-bottom: -$height-footer;
+    background: url("/src/assets/balleeffet.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  &__contenair{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    min-height: 90rem;
+    font-size: 1.5rem;
+    padding: 3rem 0rem 3rem 0rem;
+    border-radius: 1rem;
+    background-color: #ededed;
+    color:#1c166c;
+  }
+
+  &__content{
+    background-color: white;
+    border: 0.1rem solid #dadada;
+    border-radius: 1rem;
+    flex-basis: 55%;
+    padding: 1rem;
+    height: min-content;
+  }
+
+  &__summary{
+    border: 0.1rem solid #dadada;
+    border-radius: 1rem;
+    background-color: white;
+    flex-basis: 35%;
+    padding: 1rem;
+    height: min-content;
+  }
+
+    
+}
+    
+
+.cart-content{
+
+
+  &__first-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    
+  &__title{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+  }
+
+  &__nbre-article{
+    font-size: 1.6rem;
+
+  }
+  
+
+  &__product-wrapper, &__product-wrapper-installation{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 0.1rem solid #dadada;
+    border-bottom: 0.1rem solid #dadada;
+    }
+
+  &__product-wrapper-installation{
+    margin-left: 1rem;
+  }
+
+
+
+  &__link-to-card-product{
+
+  }
+
+  &__image{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    border: 0.1rem solid #dadada;
+    }
+
+  &__product-info-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 11rem;
+    padding-left: 1rem;
+    }
+
+
+  &__product-info-wrapper-left{
+    display: flex;
+    flex-direction: column;
+    height: 11rem;
+    justify-content: space-between;
+
+    }
+
+  &__text-weight-uppercase{
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__product-price{
+    font-size: 1.7rem;
+    font-weight: 550;
+
+  }
+
+  &__wrapper-icons{
+    display: flex;
+    align-items: center;
+  }
+
+  &__deleteIcon{
+    font-size: 2rem !important;
+    margin-left: 1.5rem;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__instal-with-string-top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__product-wrapper-instal-with-string{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 0.1rem solid #dadada;
+    border-bottom: 0.1rem solid #dadada;
+  }
+
+  &__content-on-one-line{
+  display: flex;
+  justify-content: space-between;
+  }
+
+  &__link-to-card-product{
+    text-decoration: none;
+    margin-left: 0.2rem;
+  }
+
+  &__pose-cordage{
+    font-weight: 550;
+    }
+
+  &__cordage{
+    display: flex;
+  }
+
+}
+
+
+
+.cart-summary{
+
+  &__first-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid #dadada;
+  }
+    
+  &__title{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &__detail-wrapper{
+    margin-top: 2rem;
+    border-bottom: 0.1rem solid #dadada;
+  }
+
+  &__number-product, &__delivery, &__total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__total-line{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: 550;
+  }
+
+}
+
+.btn-cart{
+   max-width: max-content;
+   margin: auto;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+
+  
+  
+    
+    
+  
+   
+    /* -------------------  Responsive ----------------------*/
+    
+@media screen and (max-width: 768px) {
+
+  .cart{ 
+
+    &__main{
+      width: 100%;
+      height: min-content;
+    }
+      
+    &__contenair{
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 5rem;
+      margin-bottom: 0rem;
+      border-radius: 0rem;
+      height: min-content;
+      min-height: 0px ;
+      padding-bottom: 0rem;
+      padding-top: 3rem;
+    }
+
+    &__content{
+      flex-basis: auto;
+      border-radius: 0rem;
+    }
+  
+    &__summary{
+      flex-basis: auto;
+      border-radius: 0rem;
+    }
+
+  }
+}
+    
+    
+    
+

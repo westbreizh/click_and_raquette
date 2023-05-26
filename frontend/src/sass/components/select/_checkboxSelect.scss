@@ -1,0 +1,155 @@
+
+.checkboxSelects__wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.checkBoxSelect{
+
+  &__wrapper{    
+    position: relative;
+    display: flex;
+    margin-bottom: 1rem;
+    height: 1.8rem;
+    width: 15rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  &__title{  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    color: #1c166c;;
+    cursor: pointer;
+    border: 1px solid #1c166c ;
+    border-radius: 0.7rem;
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top: 5px solid #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #1c166c;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__arrow-down{
+    transform: rotate(0deg);
+  }
+
+  &__arrow-up{
+    transform: rotate(180deg);
+  }
+
+  &__submenu-contenair{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 15rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    color: #1c166c;
+    overflow-y: auto;
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  &__submenu-ul{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__submenu-li{
+    padding: 10px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  &__submenu-li:hover {
+    background-color: #f0f0f0;
+  }
+
+  &__submenu-li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  }
+
+  &__submenu-li input[type="checkbox"]:checked + label:before {
+    content: "✔";
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 1em;
+    background-color: #f36656;
+    border-color:#f36656;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  &__option-label{
+    display: flex;
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    width: 11rem;
+
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 2rem;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+
+
+/* -------------------  Responsive ----------------------*/
+
+@media screen and (max-width: 700px) {
+
+  .checkboxSelects__wrapper{
+  justify-content: center;
+  }
+
+
+}
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  

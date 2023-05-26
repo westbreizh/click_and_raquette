@@ -1,0 +1,55 @@
+/* -------------------  Colour ----------------------*/
+
+
+$background-header: #170647;
+$background-footer: #170647;
+$background-window: #1c166c;
+
+
+$colour-primary: #170647;
+$colour-primary-light: lighten($colour-primary,5%);
+$colour-secondary: #1c166c;
+$colour-secondary-light: lighten($colour-secondary,5%);
+$colour-third:#000;
+$colour-fourth:#f6f6f6;
+$colour-fourth-light:#f7e7ff;
+$colour-white: #fff;
+$colour-fifth:  #EBFF00;
+$colour-sixth: #2330A4;
+$colour-seventh: #151534;
+$colour-sixth-light: lighten($colour-sixth,10%);
+$colour-heighth: #abe8d9;
+
+
+$colour-accent: #D6FFF5;
+
+$colour-hover: #c5db46;
+$colour-invalid: #eb2020;
+
+
+
+
+/* -------------------  dimensions ----------------------*/
+
+
+$height-header: 8rem;
+$height-footer: 10rem;
+$width-max-desktop: 122rem;
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;
+
+
+
+/* -------------------  responsive ----------------------*/
+
+/* -------------------  responsive ----------------------*/
+
+$breackpoint-toSmall: 320px;
+$breackpoint-mobile: 480x; /*rem ne fonctionne pas bien ?*/
+$breackpoint-tabletAndMobileLanscape: 768x; /*rem ne fonctionne pas bien ?*/
+$breackpoint-tabletLandscape: 1024x;
+
+/* -------------------  responsive ----------------------*/
+
+$animation-duration: 0.3s;

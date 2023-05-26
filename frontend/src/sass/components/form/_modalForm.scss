@@ -1,0 +1,36 @@
+/* -------------------  formulaire ----------------------*/
+
+.form-modal{
+
+display: flex;
+flex-direction: column;
+max-width: 550px;
+
+}
+
+
+
+
+
+
+
+
+
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:before {
+    display: none !important;
+}
+.css-1tcs2i1-MuiInputBase-root-MuiInput-root:after {
+    display: none !important;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    border:none !important;
+}
+
+.css-q0jhri-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: none !important;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    }

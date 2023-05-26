@@ -1,0 +1,270 @@
+.product{
+
+  &__main{
+    max-width: $width-max-desktop;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+    
+  &__bg{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100vh + 7rem);
+    margin-bottom: -$height-footer;
+    background: url("/src/assets/balleeffet.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  &__contenair{
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+
+    font-size: 1.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    color:#1c166c;
+  }
+  
+}
+  
+.title-product{
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 5rem;
+  color:#1c166c;
+  text-transform: uppercase;
+}
+  
+.product-card{
+
+  &__contenair{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: black;
+  }
+
+  &__image-wrapper{
+    flex-grow: 1;
+    width: 50%;
+    min-height: 38rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image{
+    max-height: 40rem;
+    max-width: 100%;
+  }
+  
+  &__info-and-order-wrapper{
+    flex-grow: 1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__info-wrapper{
+    width: 100%;
+    text-align: center;
+  }
+
+  &__info-first-line-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight:900;
+  }
+
+  &__image-logo{
+    max-height: 4rem;
+    width: auto;
+    object-fit: cover;
+    margin-right: 3rem;
+  }
+
+  &__info-description-text{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  &__order-wrapper{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+
+  &__order-price{
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  &__order-quantity-wrapper{
+    margin-bottom: 2rem;
+  }
+
+  &__order-quantity-text{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+
+}
+  
+.product-quantity{
+    
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    overflow: hidden;
+
+  }
+  
+  &__decrement, &__increment {
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    color: slategray;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  &__decrement:disabled {
+    color: slategray;
+  }
+  
+
+  
+  &__value{
+    border: 1px solid #ccc;
+    font-size: 1.7rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    color: slategray;
+    border-radius: 2px;
+  }
+  
+}
+
+
+ 
+  /* -------------------  Responsive ----------------------*/
+  
+@media screen and (max-width: 700px) {
+  
+  .product{
+
+    &__main{
+      width: 100%;
+    }
+
+    &__contenair{
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+      border-radius: 0;
+    }
+
+  } 
+
+
+  .title-product{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  
+  .product-card{
+
+    &__contenair{
+      flex-direction: column;
+    }
+
+
+    &__image-wrapper{
+      width: 100%;
+      min-height: 0rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__image{
+      width: 100%;
+      max-width: 37rem;
+      margin: auto;
+    }
+    
+
+    &__order-wrapper{
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &__info-and-order-wrapper{
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    &__order-quantity-wrapper{
+      display: flex;
+    }
+
+    &__order-quantity-text{
+      margin-right: 1.5rem;
+    }
+
+
+
+    &__info-wrapper{
+      
+    }
+
+    &__info-first-line-wrapper{
+    }
+
+    &__image-logo{
+
+    }
+
+    &__info-description-text{
+      margin-top: 1rem;
+      font-size: 1.7rem;
+      text-align: left;
+      margin-left: 1rem;
+    }
+
+  }
+
+}
+  
+  
+  

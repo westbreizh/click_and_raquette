@@ -1,0 +1,65 @@
+.menuDropdownHamburger {
+    display: none;
+}
+
+
+.showMenuDropdownHamburger{
+    animation-name:menu-hamburger-appear ;
+    animation-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:flex-end;
+    height: auto;
+    width: 100%;
+    position: absolute !important;
+    z-index: 1;
+    top: 6rem;
+    left: 0rem;
+    background-color:$colour-third ;
+    padding-left: 0rem;
+}
+
+.menuHamburger__li {
+     
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        height: 5rem;
+        font-size: 2rem; 
+        border-bottom:0.1rem solid  $colour-primary-light ;
+}
+
+.navLink__active, .navLink__inactive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.7rem;
+    width: 100%;
+    line-height: 3.2rem;
+    margin-left: 2.5rem;
+    color: $colour-white;
+    text-transform: uppercase;
+}
+.navLink__inactive {
+   text-decoration: none; 
+}
+
+
+.navLink__active:hover, .navLink__inactive:hover{
+    color:yellow    
+}
+
+.menuHamburger__icon{
+    margin-right: 2rem;
+    font-size: 2.7rem !important;
+}   
+
+
+
+@media screen and (min-width: 768px) {
+
+    .navHamburger__contenair {
+        display: none;
+        }
+}

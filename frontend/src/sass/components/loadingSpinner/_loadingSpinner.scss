@@ -1,0 +1,50 @@
+.loadingspinnerString {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.tennis-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  .tennis-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite, move 2s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+
+  .MuiCircularProgress-root {
+    z-index: 1;
+  }
+
+  .MuiCircularProgress-circle {
+    stroke: blue;
+  }
+}

@@ -1,0 +1,132 @@
+
+createSelector est une fonction fournie par la bibliothèque reselect qui permet de créer
+ des sélecteurs mémorisés dans Redux. Les sélecteurs mémorisés sont des fonctions qui 
+ calculent des valeurs dérivées à partir du state Redux, mais qui ne sont recalculées que si les entrées du sélecteur changent.
+
+Voici ce que fait createSelector :
+
+Il prend en argument un ou plusieurs sélecteurs ainsi qu'une fonction de transformation.
+
+Les sélecteurs sont des fonctions qui extraient des portions spécifiques de l'état Redux.
+
+La fonction de transformation est une fonction qui prend en entrée les résultats des 
+sélecteurs et effectue un calcul pour dériver une valeur.
+
+Lorsque le state Redux est mis à jour, les sélecteurs sont exécutés. Si les résultats
+ des sélecteurs sont identiques à ceux de la dernière exécution, la fonction de 
+ transformation n'est pas réévaluée et la valeur dérivée précédente est renvoyée.
+
+Si les résultats des sélecteurs sont différents de ceux de la dernière exécution, 
+la fonction de transformation est appelée pour recalculer la valeur dérivée.
+
+L'utilisation de createSelector permet d'optimiser les performances en évitant des 
+calculs redondants lorsque le state Redux est mis à jour, car seules les parties du 
+state qui ont été modifiées sont prises en compte pour déterminer si la fonction de 
+transformation doit être réévaluée.
+
+En résumé, createSelector permet de créer des sélecteurs mémorisés qui ne recalculent
+ les valeurs dérivées que si les entrées des sélecteurs changent, offrant ainsi des 
+ performances optimisées dans Redux. Cela est particulièrement utile lorsque les 
+ sélecteurs dépendent de calculs coûteux ou lorsque des opérations de transformation 
+ complexes sont nécessaires pour obtenir les valeurs dérivées.
+
+
+ La principale différence réside donc dans le fait que selectNumberArticle utilise 
+ createSelector et offre des fonctionnalités supplémentaires pour dériver des valeurs 
+ à partir des sélecteurs d'entrée, tandis que selectproductList est simplement un 
+ sélecteur de base qui extrait une partie spécifique de l'état.
+selectproductList est un sélecteur simple qui extrait directement la liste des
+ articles du panier à partir de l'état Redux. Il renvoie simplement la valeur de state.
+ cart.productList. C'est un sélecteur de base qui récupère une partie spécifique de
+  l'état sans effectuer de transformations supplémentaires.
+
+
+
+
+
+f(x,y,z,...)=x    recoit plusieur parametre renvoit une valeur "reduit"
+ne modifie pas l'anien state du store mais en recré un pour pouvoir les comparer ...
+reduxer recoit state et une action (type, payload), et applique du code en fontion du type pour créer un nouveau state ...
+
+
+
+Un "reducer" est une fonction qui spécifie comment l'état d'une application Redux 
+est modifié en réponse à une action. Il s'agit d'un concept central dans Redux.
+
+Dans Redux, toutes les modifications de l'état de l'application doivent passer par des reducers
+. Les reducers sont des fonctions pures qui prennent l'état actuel et une action comme arguments,
+ et retournent un nouvel état basé sur ces arguments.
+
+L'idée principale derrière les reducers est de séparer la logique de mise à jour de l'état de l'application
+ du reste de la logique de l'application. Cela permet de maintenir un état immuable et d'assurer un suivi
+  clair des modifications apportées à l'état.
+
+Dans l'exemple de code que vous avez donné, le reducer est une fonction qui prend l'état initial de
+ la tranche "user" et une action, puis retourne un nouvel état en fonction de l'action.
+  Chaque action correspond à une fonction définie dans le reducers objet de la tranche,
+   qui met à jour les propriétés de l'état en conséquence.
+
+En utilisant les reducers, Redux fournit un mécanisme prévisible pour mettre à jour l'état d
+e l'application. Lorsqu'une action est dispatchée, elle est traitée par les reducers appropriés,
+ ce qui entraîne la mise à jour de l'état de manière cohérente à travers l'application.
+
+En résumé, un reducer dans Redux est une fonction responsable de la mise à jour de l'état de l
+'application en réponse à des actions spécifiques. Il garantit un flux de données unidirectionnel et prévisible dans l'application.
+
+
+Le terme "reducer" dans Redux ne se réfère pas à la réduction ou à la diminution de l'état, 
+mais plutôt à la réduction des actions et de l'état vers un nouvel état.
+
+Le nom "reducer" provient du concept mathématique de la fonction de réduction
+ (reduce function) utilisée dans de nombreux langages de programmation fonctionnels. 
+ La fonction de réduction prend une liste de valeurs et les combine de manière itérative
+  pour produire un résultat unique. Dans Redux, le "reducer" est une fonction qui combine
+   les actions et l'état actuel pour produire un nouvel état.
+
+L'idée principale derrière le "reducer" dans Redux est de prendre l'état courant 
+de l'application et une action, puis de réduire (ou combiner) ces informations pour p
+roduire un nouvel état. Le "reducer" ne modifie pas directement l'état existant,
+mais plutôt crée un nouvel état basé sur les informations fournies.
+
+Le terme "reducer" peut sembler un peu déroutant dans le contexte de Redux, car il est 
+souvent associé à la réduction de données ou de valeurs. Cependant, dans Redux, il se 
+réfère à la fonction qui combine les actions et l'état pour produire un nouvel état g
+lobal de l'application.
+
+En résumé, bien que le terme "reducer" puisse prêter à confusion, il représente en réalité 
+la fonction qui combine les actions et l'état pour produire un nouvel état dans Redux. 
+Il n'implique pas une réduction ou une diminution de l'état, mais plutôt la combinaison des 
+informations pour produire un nouvel état global.
+
+
+
+Ce code utilise la méthode reduce pour calculer la somme totale de la quantité des 
+articles dans productList. Voici comment cela fonctionne étape par étape :
+
+reduce est une méthode JavaScript utilisée pour réduire une liste à une seule 
+valeur en appliquant une fonction de réduction à chaque élément de la liste.
+
+L'expression (total, article) => total + article.quantity est la fonction de réduction.
+ Elle prend deux arguments : total et article. total représente la valeur accumulée à 
+ chaque étape de la réduction, et article est l'élément actuel de la liste.
+
+Au départ, le paramètre total est initialisé à 0. Cela est spécifié comme deuxième 
+argument de reduce, c'est-à-dire reduce(..., 0). C'est la valeur initiale de 
+l'accumulateur.
+
+À chaque itération, la fonction de réduction ajoute la quantité de l'article actuel 
+à la valeur accumulée (total). Cela est représenté par total + article.quantity.
+ La quantité de l'article est extraite en utilisant article.quantity.
+
+La valeur accumulée (total) est renvoyée à la fin de chaque itération et utilisée
+ comme valeur d'accumulateur pour l'itération suivante.
+
+Une fois toutes les itérations terminées, reduce renvoie la valeur finale 
+de l'accumulateur, qui est la somme totale de toutes les quantités des articles 
+dans productList.
+
+En résumé, l'expression productList.reduce((total, article) => 
+total + article.quantity, 0) itère sur tous les articles de productList, 
+ajoute la quantité de chaque article à une valeur accumulée (total) et renvoie
+ la somme totale de toutes les quantités. Cela permet de calculer le nombre total 
+ d'articles dans le panier.

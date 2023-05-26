@@ -1,0 +1,109 @@
+.icon-submenu__wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.icon__wrapper, .icon__wrapper__noSelected, .icon__wrapper__selected{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+line-height: 3.2rem;
+min-width: 11rem;
+height: 8rem;
+color: $colour-white;
+border-radius: 2rem 2rem 0rem 0rem;
+  &:hover{
+    color:yellow ;
+    cursor: auto ;
+    background-color:$colour-seventh ;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
+}
+
+.icon__wrapper__selected{
+  color:yellow ;
+  background-color:$colour-seventh ;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.text-accountIcon{
+  cursor: default;
+}
+
+.accountIcon{
+  font-size: 2.5rem !important;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+
+  .icon__wrapper__noSelected, .icon__wrapper__selected{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.7rem;
+    line-height: 3.2rem;
+    margin-left: 2.5rem;
+    color: $colour-white;
+    text-transform: uppercase;
+    &:hover{
+      color:yellow ;
+      cursor: pointer ;
+      background-color:transparent;
+      border-radius: 0rem;
+    }
+
+  }
+  .text-accountIcon{
+    cursor: pointer;
+  }
+
+
+    .accountIcon{
+      margin-right: 2rem;
+      font-size: 2.5rem !important;
+    }
+
+
+
+
+
+
+
+
+
+
+    
+    .modal__connexion-mobile{
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav__modal-toggle-mobile{
+      display: flex ;
+      flex-direction: column ;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      line-height: 33px;
+      text-align: left;
+      white-space: normal;
+      margin-left: 1.8rem;
+      margin-top: 0.5rem;
+      &:hover{
+        color:yellow;
+        cursor: pointer;
+    }
+
+      }
+   
+      .nav__modal-icon-mobile{
+        margin-right: 0rem;
+        font-size: 2.5rem !important;
+      }
+
+ }

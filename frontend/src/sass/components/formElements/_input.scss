@@ -1,0 +1,84 @@
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+}
+
+
+
+.input{
+    &__label{
+        display: inline-block;
+        font-size: 1.5rem !important;
+        font-weight: bold !important;
+        color: #232346 !important;
+        font-family: "Roboto","Arial",sans-serif;
+        margin-bottom: 1rem !important;
+
+    }
+    &__text{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none !important;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        background-color: #e7e4e4 !important;
+        border: none !important;
+        min-height: 4.4rem;
+        padding: 0 1.6rem;
+        border-radius: 1rem !important;
+        max-width: 40rem;
+        white-space: normal;
+        overflow: hidden; /* Empêche le contenu de déborder de l'élément */
+        word-wrap: break-word; /* Permet de faire aller à la ligne le texte qui déborde */
+        overflow-wrap: break-word; /* Alternative à word-wrap, pour les navigateurs plus récents */
+        text-overflow: ellipsis;
+    }        
+
+
+        &:focus{
+            border: none !important;
+            background-color: #f6fafa !important;
+        }
+        &:before{
+            display: none;
+        }
+    
+    &__error{
+        display: flex;
+
+        font-size: 1.5rem;
+        padding: 0rem ;
+        background: none;
+        color: #a02f06;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        max-width: 40rem;
+    }
+
+}
+
+
+.input__text-password{
+
+    appearance: none !important;
+    font-size: 1.7rem !important;
+    font-weight: bolder !important;
+    background-color: #e7e4e4 !important;
+    border: none !important;
+    min-height: 4.4rem !important;
+    padding: 0 1.6rem !important;
+    border-radius: 1rem !important;
+    position: initial !important;
+    max-width: 43rem;
+
+
+    &:focus{
+        border: none !important;
+        background-color: #f6fafa !important;
+    }
+}
+.eye{
+font-size: 2.5rem !important;
+}

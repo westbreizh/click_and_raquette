@@ -1,0 +1,30 @@
+.header {
+    background: $background-header;
+    height: $height-header;
+    position: fixed;
+    z-index: 2;
+    top: 0; 
+    left: 0;
+    right: 0;
+    &__wrapper-width{
+        height: $height-header;
+        max-width: $width-max-desktop;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 6rem;
+        height: 6rem;
+        margin-left: 2.5rem;
+    }
+    
+}
+
+
+    
+
+
+

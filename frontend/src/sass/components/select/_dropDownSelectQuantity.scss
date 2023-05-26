@@ -1,0 +1,56 @@
+.dropDownSelectQuantity {
+
+    &__wrapper{
+    position: relative;
+    display: flex;
+    margin-top: 0.5rem;
+    width: max-content;
+
+    }
+
+    &__label {
+    color:black;
+    position: relative;
+    margin-right: 1rem;
+
+    }
+  
+    &__select {
+        position: relative;
+        padding-left: 5px;
+        width:4.5rem;
+        border-radius: 2px;
+        }
+
+    &__arrow-icon {
+      position: absolute;
+      top: 25%;
+      right: 5px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg);
+      margin-right: 0.5rem;
+      pointer-events: none;
+    }
+    
+    &__arrow-icon-up {
+      transform: rotate(135deg);
+    }
+
+    &__arrow-icon-down {
+      transform: rotate(-45deg);
+    }
+
+
+
+
+}
+
+
+
+
+
+  

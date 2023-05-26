@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/click-raquette/static/css/main.77c48e71.css",
+    "main.js": "/click-raquette/static/js/main.9f9d14ce.js",
+    "static/media/LOGO.jpg": "/click-raquette/static/media/LOGO.a4512731d971eade231b.jpg",
+    "static/media/balle.jpeg": "/click-raquette/static/media/balle.51019c160afb6aa0faa4.jpeg",
+    "static/media/balleeffet.jpeg": "/click-raquette/static/media/balleeffet.37f56eecae57f2899f29.jpeg",
+    "static/media/cordagecasse.jpeg": "/click-raquette/static/media/cordagecasse.619d0a44dd21c13860d4.jpeg",
+    "index.html": "/click-raquette/index.html",
+    "main.77c48e71.css.map": "/click-raquette/static/css/main.77c48e71.css.map",
+    "main.9f9d14ce.js.map": "/click-raquette/static/js/main.9f9d14ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77c48e71.css",
+    "static/js/main.9f9d14ce.js"
+  ]
+}

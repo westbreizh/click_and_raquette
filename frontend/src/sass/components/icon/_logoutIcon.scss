@@ -1,0 +1,20 @@
+.logout{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+        &:hover{
+            cursor: pointer;
+            color: yellow;
+        }
+    }
+    &__icon{
+
+        font-size: 2.2rem !important;
+        padding-bottom: 0.2rem;
+    }
+    &__text{
+        font-size: 1.7rem !important;
+        margin-left: 1rem;
+    }
+}

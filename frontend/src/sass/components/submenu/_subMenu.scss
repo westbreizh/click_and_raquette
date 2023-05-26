@@ -1,0 +1,87 @@
+
+.submenu{
+    &__contenair{
+    position: absolute !important;
+    z-index: 1;
+    top: $height-header;
+    left: 0px;
+    animation-name:menu-hamburger-appear ;
+    animation-duration: 0.2s;
+    width: 100%;
+    background-color:$colour-seventh ;
+    display: flex;
+    justify-content: center;
+    }
+
+    &__max-width-box{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-transform: none;
+        max-width: 122rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+
+
+
+    &__colum-left{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+        }
+
+    &__colum-right{
+        margin-right: 2rem;
+        
+    }
+
+    &__ul {
+        list-style-type: none;
+        padding-left: 2rem; 
+    
+    }
+
+    &__li {
+        list-style-type: none;
+        display: flex !important;
+        width: 100%;
+        height: 4rem;
+        font-size: 1.7rem; 
+        border-bottom:0.1rem solid  $colour-primary-light ;
+    }
+
+
+    &__navLink__active, &__navLink__inactive {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.7rem;
+        line-height: 3.2rem;
+        margin-left: 0.5rem;
+        color: $colour-white;
+        text-transform: none;
+    }
+
+    &__navLink__inactive {
+    text-decoration: none; 
+    }
+
+
+    &__navLink__active:hover, &__navLink__inactive:hover{
+        color:yellow 
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+ .submenu{
+    &__contenair{
+        display: none;
+    }
+    }
+}

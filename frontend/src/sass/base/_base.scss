@@ -1,0 +1,46 @@
+html {
+  // 10px div by def of 16px
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background: $background-window;
+  font-family: 'Roboto', sans-serif;
+  color:$colour-white;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+  margin: 0rem;
+  width: 100%;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.main-global{
+        max-width: $width-max-desktop;
+        margin: auto;
+        width: 85%;
+    }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .main-base{
+    width: 100%;
+  }
+
+}
+
+
+
+
+
