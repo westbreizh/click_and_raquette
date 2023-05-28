@@ -5,17 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import {resetStringChoice} from '../../store/cartSlice'
 
 
-
 export default function ChoiceButton(props) {
 
   const stringChoice = props.stringChoice
   const [isSubmenuValidationOpen, setSubmenuValidation]= useState(false)
   const dispatch = useDispatch();
   const productWithQuantity  =props.productWithQuantity 
-
   const navigate = useNavigate()
  
-
   const handleAddToStringing = () => {
     dispatch(resetStringChoice(stringChoice))
     navigate("/cordez")
@@ -32,10 +29,10 @@ export default function ChoiceButton(props) {
       </button>
 
       {isSubmenuValidationOpen && 
-      <ModalValidationAddToCart 
-      productWithQuantity={productWithQuantity}
-      setSubmenuValidation={setSubmenuValidation}
-      />
+        <ModalValidationAddToCart 
+        productWithQuantity={productWithQuantity}
+        setSubmenuValidation={setSubmenuValidation}
+        />
       }
 
     </>

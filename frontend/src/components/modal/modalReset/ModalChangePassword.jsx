@@ -29,7 +29,7 @@ export default function ModalChangePassword(props) {
 
   const backToBegin = function(){
   dispatch(connectedToggle()); 
-  navigate("/");
+  navigate("/click-raquette");
   };
 
 

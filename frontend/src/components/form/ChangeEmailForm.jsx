@@ -5,18 +5,16 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { changeEmail } from "../../store/userSlice"
 import { store } from "../../store/store"
 import ModalValidationMessageModif from "../modal/modalValidation/ModalValidationMessageModif";
-
 import { shemaInputChangeEmail } from "../../Utils/shemaInput"
 
 
 export default function ChangeEmailForm( props ) {
 
   const onClose = props.onClose
+  const token = useSelector((state) => state.user.token);
 
   //gestion de l'ouverture du modal de validation et fermeture des 2 modales (modalValidation et modalChangeEmail...)
-
   const [isModalValidationMessageOpen, setModalValidationMessageOpen] = useState(false);
-
   const showModalValidation = function(){
   setModalValidationMessageOpen(true);
   };
@@ -36,24 +34,20 @@ export default function ChangeEmailForm( props ) {
   // gestion du contôle de la validité des inputs 
   const { register , formState, handleSubmit,   formState: { errors }  } =
    useForm({
-            resolver: yupResolver(shemaInputChangeEmail),
-            mode: 'onTouched',
-            shouldFocusError: true,
-          });
+    resolver: yupResolver(shemaInputChangeEmail),
+    mode: 'onTouched',
+    shouldFocusError: true,
+  });
 
-  const {isSubmitting, isValid} = formState;
+  const {isValid} = formState;
 
    // gestion de la valeure de la réponse backend 
    const [messageFromBackEnd, setMessageFromBackend] = useState("") ;
-
    function changeMessageFromBackEnd(messageFromBack) {
      setMessageFromBackend(messageFromBack);
    }
  
-   const token = useSelector((state) => state.user.token);
-
-
-
+   
    //fonction asynchrone vers le backend modifiant l'e-mail
 
    const onSubmit = async function (data) {

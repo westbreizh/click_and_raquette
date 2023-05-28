@@ -8,7 +8,7 @@ export default function ModalValidationSignup( props) {
   const navigate = useNavigate();
   const goToHomeAndcloseModal = function(){
     onClose();
-    navigate("/");
+    navigate("/click-raquette");
   }
 
   return createPortal(

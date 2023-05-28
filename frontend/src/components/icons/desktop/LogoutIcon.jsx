@@ -10,15 +10,19 @@ export default function LogoutIcon(props) {
 
   function logoutAction() {
     dispatch(connectedToggle()); 
-    navigate("/");
+    navigate("/click-raquette");
   }
 
-  // ...
 
   return (
+
     <div className="logout__wrapper" onClick={logoutAction}>
+
       <PowerSettingsNewIcon className="logout__icon" />
       <div className="logout__text">Déconnexion</div>
+
     </div>
+
   );
+
 }

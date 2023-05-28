@@ -11,6 +11,9 @@ import ModalValidationMessageModif from "../modal/modalValidation/ModalValidatio
 export default function CoordinateForm( props ) {
 
   const onClose = props.onClose
+  const store = useStore()
+  const playerId = useSelector((state) => state.user.userInfo.id);
+  const token = useSelector((state) => state.user.token);
 
  
   //gestion de l'ouverture du modal de validation et fermeture des 2 modales (modalValidation et modalChangeEmail...)
@@ -20,7 +23,6 @@ export default function CoordinateForm( props ) {
   const showModalValidation = function(){
   setModalValidationMessageOpen(true);
   };
-
   const hideModal = function(){
   setModalValidationMessageOpen(false);
   onClose();
@@ -37,12 +39,12 @@ export default function CoordinateForm( props ) {
   // gestion du contôle de la validité des inputs 
   const { register , formState, handleSubmit,   formState: { errors }  } =
    useForm({
-            resolver: yupResolver(shemaInputCoordonate),
-            mode: 'onTouched',
-            shouldFocusError: true,
-          });
+    resolver: yupResolver(shemaInputCoordonate),
+    mode: 'onTouched',
+    shouldFocusError: true,
+  });
 
-  const {isSubmitting, isValid} = formState;
+  const { isValid } = formState;
 
    // gestion de la valeure de la réponse backend 
    const [messageFromBackEnd, setMessageFromBackend] = useState("") ;
@@ -50,15 +52,7 @@ export default function CoordinateForm( props ) {
    function changeMessageFromBackEnd(messageFromBack) {
      setMessageFromBackend(messageFromBack);
    }
-
-
-  // recupération du store redux en asynchrone
-  // useSelector et useDispatch pas ok useStore ok  
-  const store = useStore()
-  const playerId = useSelector((state) => state.user.userInfo.id);
-  const token = useSelector((state) => state.user.token);
-
-
+ 
 
   //fonction asynchrone vers le backend verifiant l'email et le mot de passe associé
 
@@ -123,17 +117,17 @@ export default function CoordinateForm( props ) {
 
       <div className="buttons-wrapper-ModalChange">
 
-      <button 
-        disabled={ !isValid} 
-        type="submit" 
-        className={isValid ? "btn btn-blue" : "btn btn-blue-invalid"}>
-          valider
-        </button>
+        <button 
+          disabled={ !isValid} 
+          type="submit" 
+          className={isValid ? "btn btn-blue" : "btn btn-blue-invalid"}>
+            valider
+          </button>
 
         <button
-        onClick={() => onClose() } 
-        className={"btn btn-white-blue btn-last"}>                
-          annuler
+          onClick={() => onClose() } 
+          className={"btn btn-white-blue btn-last"}>                
+            annuler
         </button>
 
       </div>

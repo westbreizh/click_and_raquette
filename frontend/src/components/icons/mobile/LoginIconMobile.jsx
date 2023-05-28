@@ -5,15 +5,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 export default function LoginIconMobile(props) {
 
   const toggleMenuHamburger = props.toggleMenuHamburger
-
-  //gestion de l'ouverture du modal 
-
   const [isModalConnexionOpen, setModalConnexionOpen] = useState(false);
-
   const showModal = function(){
     setModalConnexionOpen(true);
   };
-
   const closeModalConnexion = function(){
     setModalConnexionOpen(false);
     toggleMenuHamburger();

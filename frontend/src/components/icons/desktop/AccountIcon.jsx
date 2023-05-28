@@ -8,11 +8,8 @@ export default function AccountIcon(props) {
 
   const userInfo = useSelector((state) => state.user.userInfo)
   const forename = userInfo.forename
-
   const [isSubmenuAccountOpen, setSubmenuAccountOpen] = useState(false)
   const [classNameWrapperAccountIcon, setclassNameWrapperAccountIcon] = useState("icon__wrapper__noSelected")
-
-
 
   function toogleSubmenuOn () { 
     if (!isSubmenuAccountOpen) {
@@ -27,7 +24,7 @@ export default function AccountIcon(props) {
       setSubmenuAccountOpen(!isSubmenuAccountOpen);
     }
   }
-  //onMouseLeave={()=> toogleSubmenuOff()}       
+       
 
   return (
     

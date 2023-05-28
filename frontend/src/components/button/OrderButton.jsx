@@ -11,15 +11,15 @@ export default function OrderButton(props) {
   const dispatch = useDispatch();
   const productWithQuantity  =props.productWithQuantity 
 
- 
-
-
   const handleAddToCart = () => {
-    dispatch(addArticle(productWithQuantity))
-    setSubmenuValidation(true)
+    dispatch(addArticle(productWithQuantity));
+    setSubmenuValidation(true);
+    dispatch(calculNumberArticle());
   }
+  
 
   return (
+
     <>
 
       <button 
@@ -29,9 +29,9 @@ export default function OrderButton(props) {
       </button>
 
       {isSubmenuValidationOpen && 
-      <ModalValidationAddToCart 
-      productWithQuantity={productWithQuantity}
-      setSubmenuValidation={setSubmenuValidation}
+        <ModalValidationAddToCart 
+        productWithQuantity={productWithQuantity}
+        setSubmenuValidation={setSubmenuValidation}
       />
       }
 

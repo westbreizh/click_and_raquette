@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import {  useSelector, useDispatch } from 'react-redux'
-import { addInstallationString } from "../../store/cartSlice"
+import { addInstallationString, calculNumberArticle } from "../../store/cartSlice"
 import { NavLink } from 'react-router-dom';
 import SelectClub from '../../components/select/SelectClub';
 import SelectString from '../../components/select/SelectString';
@@ -76,6 +76,7 @@ export default function Stringing() {
       console.log(article)
       dispatch(addInstallationString(article))
       setSubmenuValidation(true)
+      dispatch(calculNumberArticle());
       //registerPreferencePlayer(userEmail, clubChoice, stringRopeChoice, stringChoice )
     }
   };

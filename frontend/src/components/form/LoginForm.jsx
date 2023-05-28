@@ -31,35 +31,27 @@ export default function LoginForm( props ) {
   // gestion du contôle de la validité des inputs 
   const { register , formState, handleSubmit,   formState: { errors }  } =
    useForm({
-            resolver: yupResolver(shemaInputLogin),
-            mode: 'onTouched',
-            shouldFocusError: true,
-          });
+    resolver: yupResolver(shemaInputLogin),
+    mode: 'onTouched',
+    shouldFocusError: true,
+  });
 
   const { isValid} = formState;
 
-
    // gestion de la valeure de la réponse backend 
    const [messageFromBackEnd, setMessageFromBackend] = useState("") ;
-
    function changeMessageFromBackEnd(messageFromBack) {
      setMessageFromBackend(messageFromBack);
    }
 
-
-  // recupération du store redux en asynchrone
-  // useSelector et useDispatch pas ok useStore ok  
   const store = useStore()
-
   const navigate = useNavigate();
 
   // gestion de l'ouverture du modale de réinitialisation du mot de passe
   const [isModalResetPasswordOpen, setModalResetPasswordOpen] = useState(false) ;
-
   const showModalResetPassword = () => {
     setModalResetPasswordOpen(true);
   };
-
   const closeModalResetPassword = function(){
     setModalResetPasswordOpen(false);
   };

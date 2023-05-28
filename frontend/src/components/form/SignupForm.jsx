@@ -2,11 +2,9 @@ import { useForm} from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup'
 import { shemaInputSignup } from "../../Utils/shemaInput"
 import { Link } from "react-router-dom" 
-
 import { useState } from 'react'
 import { useStore } from "react-redux"
 import {connectedToggle, setUserInfo} from '../../store/userSlice'
-
 import { Input, InputAdornment, IconButton } from '@mui/material'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -15,19 +13,15 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function SignupForm(props) {
 
-
-
   const showModal = props.showModal
 
-  // gestion du contôle de la validité des inputs 
   const { register , formState, handleSubmit,   formState: { errors }  } =
    useForm({
-            resolver: yupResolver(shemaInputSignup),
-            mode: 'onTouched',
-            shouldFocusError: true,
-          });
-
-  const {isSubmitting, isValid} = formState
+    resolver: yupResolver(shemaInputSignup),
+    mode: 'onTouched',
+    shouldFocusError: true,
+    });
+  const {isValid} = formState
 
 
   // gestion de l'affichage du mot de passe
@@ -58,8 +52,6 @@ export default function SignupForm(props) {
    // gestion du store redux en asynchrone
    const store = useStore()
 
-
-
   //fonction asynchrone vers le backend enregistrant l'utilisateur
   const onSubmit = async function (data) {
     try{
@@ -85,7 +77,6 @@ export default function SignupForm(props) {
         console.log(result.message)
       }
     }
-
     catch(err){
       const errorMessage = err.toString();
       console.log(errorMessage);

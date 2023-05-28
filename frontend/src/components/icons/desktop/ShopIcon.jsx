@@ -6,11 +6,8 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 export default function ShopIcon(props) {
 
 
-
   const [  isSubmenuShopOpen, setSubmenuShopOpen] = useState(false)
   const [classNameWrapperShopIcon, setclassNameWrapperShopIcon] = useState("icon__wrapper__noSelected")
-
-  
 
   function toogleSubmenuOn () { 
     if (!  isSubmenuShopOpen) {
@@ -25,7 +22,7 @@ export default function ShopIcon(props) {
       setSubmenuShopOpen(!  isSubmenuShopOpen);
     }
   }
-      //    onMouseLeave={()=> toogleSubmenuOff()}   
+ 
 
   return (
     
@@ -40,7 +37,10 @@ export default function ShopIcon(props) {
       </div>
 
       {   isSubmenuShopOpen?
-        <ShopSubmenu isSubmenuOpen= {  isSubmenuShopOpen} classNameWrapperShopIcon = {classNameWrapperShopIcon} toogleSubmenuOff ={toogleSubmenuOff}/>
+        <ShopSubmenu 
+        isSubmenuOpen= {  isSubmenuShopOpen} 
+        classNameWrapperShopIcon = {classNameWrapperShopIcon} 
+        toogleSubmenuOff ={toogleSubmenuOff}/>
         :""
       }
 

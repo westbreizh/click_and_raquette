@@ -9,7 +9,7 @@ export default function ModalValidationMessageRestPassword( props) {
   const navigate = useNavigate();
   const goToHomeAndcloseModals = function(){
     closeModalConnexion();
-    navigate("/");
+    navigate("/click-raquette");
   }
 
 

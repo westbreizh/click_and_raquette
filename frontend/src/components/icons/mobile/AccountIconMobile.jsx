@@ -6,20 +6,14 @@ import AccountSubmenuMobile from "../../submenu/AccountSubmenuMobile"
 
 export default function AccountIconMobile(props) {
 
-
   const toggleMenuHamburger = props.toggleMenuHamburger
   const userInfo = useSelector((state) => state.user.userInfo)
   const forename = userInfo.forename
-
   const [isMobileSubmenuOpen, setMobileSubmenuOpen] = useState(false)
   function toggleMobileSubmenu() { 
       setMobileSubmenuOpen(!isMobileSubmenuOpen);  }
   
  
-
-
-
-
   return (
 
     <>
@@ -32,12 +26,12 @@ export default function AccountIconMobile(props) {
 
       </div>
 
-    
-          { isMobileSubmenuOpen?
-            < AccountSubmenuMobile   toggleMobileSubmenu ={toggleMobileSubmenu} 
-            toggleMenuHamburger={toggleMenuHamburger}/>
-            :""
-          }
+      { isMobileSubmenuOpen?
+        < AccountSubmenuMobile   toggleMobileSubmenu ={toggleMobileSubmenu} 
+        toggleMenuHamburger={toggleMenuHamburger}/>
+        :""
+      }
+      
     </>
   )
 } 

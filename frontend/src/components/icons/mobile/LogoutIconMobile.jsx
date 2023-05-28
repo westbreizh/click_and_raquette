@@ -6,28 +6,23 @@ import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 export default function LogoutIconMobile(props) {
 
   const toggleMenuHamburgerAndSubmenu=props.toggleMenuHamburgerAndSubmenu
-  
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
-  
   function logoutAction() {
     toggleMenuHamburgerAndSubmenu();
     dispatch(connectedToggle()); 
-    navigate("/");
-
+    navigate("/click-raquette");
   }
 
+  return (
 
-    return (
+    <div className="logout__wrapper" onClick={logoutAction}  >
+        <PowerSettingsNewIcon className="logout__icon" />
+        <div className="logout__text">Déconnexion</div>
+    </div>
 
-      <div className="logout__wrapper" onClick={logoutAction}  >
-          <PowerSettingsNewIcon className="logout__icon" />
-          <div className="logout__text">Déconnexion</div>
-      </div>
-
-    )
+  )
 }
 
 

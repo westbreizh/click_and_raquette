@@ -11,13 +11,15 @@ export default function OrderStringingButton(props) {
   const dispatch = useDispatch();
   const stringingWithString  =props.stringingWithString 
 
-
   const handleAddToCart = () => {
     dispatch(addArticle(stringingWithString))
-    setSubmenuValidation(true)
+    setSubmenuValidation(true);
+    dispatch(calculNumberArticle());
   }
+  
 
   return (
+
     <>
 
       <button 
@@ -27,9 +29,9 @@ export default function OrderStringingButton(props) {
       </button>
 
       {isSubmenuValidationOpen && 
-      <ModalValidationAddToCart 
-      stringingWithString={stringingWithString}
-      setSubmenuValidation={setSubmenuValidation}
+        <ModalValidationAddToCart 
+        stringingWithString={stringingWithString}
+        setSubmenuValidation={setSubmenuValidation}
       />
       }
 
