@@ -40,7 +40,7 @@ export default function ModalValidationAddToCartInstallation( props) {
               voire le panier
             </Link>  
 
-            <Link to="/panier" className='btn btn-green btn-installation-atc btn-last'>
+            <Link to="/commande" className='btn btn-green btn-installation-atc btn-last'>
               commander
             </Link>  
             

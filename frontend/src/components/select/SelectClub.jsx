@@ -16,6 +16,9 @@ export default function SelectClub(props) {
   };
   
  
+
+
+
   return (
 
     <div 
@@ -57,3 +60,40 @@ export default function SelectClub(props) {
       
   );
 }
+
+
+
+
+
+/*
+  //fonction asynchrone vers le backend enregistrant les choix relatifs aux cordages de  l'utilisateur
+  const clubListLoading = async function (userEmail, clubChoice, stringRopeChoice, stringChoice ) {
+    try{
+
+      const response = await fetch(`http://localhost:3001/api/club/clubList`, {
+        mode: "cors",
+        method: "POST",
+        headers: {"Content-Type": "application/json"}})
+
+        if (!response.ok) {
+          const result = await response.json();
+          throw new Error(` ${result.message}`);
+        }else {
+          const result = await response.json();
+          console.log(result)
+          const clubList = result.clubList
+          console.log(clubList)
+      }
+    }
+
+    catch(err){
+      const errorMessage = err.toString();
+      console.log(errorMessage);
+    }
+  }
+
+  // charger une liste de cordages aléatoires au chargement de la page
+  useEffect(() => {
+    clubListLoading ()
+  },[])
+  */

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import ModalConnexionOrSingup from '../../modal/ModalConnexionOrSignup';
+import ModalLoginOrSingupFromAccount from '../../modal/modalLoginOrSignup/ModalLoginOrSignupFromAccount';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export default function LoginIcon(props) {
@@ -23,7 +23,7 @@ export default function LoginIcon(props) {
       </div>
 
       {isModalConnexionOpen && 
-      <ModalConnexionOrSingup 
+      <ModalLoginOrSingupFromAccount 
       closeModalConnexion={closeModalConnexion}/>}
 
     </div>

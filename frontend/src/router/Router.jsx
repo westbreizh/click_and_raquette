@@ -17,6 +17,7 @@ import ProductBallPage from '../pages/shop/ProductBallPage'
 import ProductAccessoriesPage from '../pages/shop/ProductAccessoriesPage'
 import Cart from '../pages/cart/Cart'
 import ErrorPage from '../pages/errorPage/ErrorPages'
+import Order from '../pages/order/order'
 
 
 export default function Router() {
@@ -42,6 +43,7 @@ export default function Router() {
           <Route path="/fiche_produit/accessoire/:productId"  element = {<ProductAccessoriesPage />} />
           <Route path='/panier'  element = {< Cart/>} />
           <Route path='/coordonnées'  element = {< Coordinate/>} />
+          <Route path='/commande'  element = {< Order/>} />
           <Route path='/préférences_joueur'  element = {< PreferencePlayer/>} />
           <Route path='/historique_commandes' element={<OrderHistory />} />
           <Route path='/*' element={<ErrorPage />} />

@@ -6,9 +6,9 @@ export default function ModalValidationSignup( props) {
 
   const onClose = props.onClose
   const navigate = useNavigate();
-  const goToHomeAndcloseModal = function(){
+  const goBackAndcloseModal = function(){
     onClose();
-    navigate("/click-raquette");
+    navigate(-1);
   }
 
   return createPortal(
@@ -26,7 +26,7 @@ export default function ModalValidationSignup( props) {
               <div className="modal__button-wrapper" >
 
                 <button
-                  onClick={() => {goToHomeAndcloseModal() }} 
+                  onClick={() => {goBackAndcloseModal() }} 
                   className={"btn btn-blue"}
                 >                
                   ok

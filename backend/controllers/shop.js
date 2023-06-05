@@ -7,8 +7,6 @@ const sendEmail = require("../email/sendEmail")
 const db = require("../BDD/database-connect")
 
 
-
-
 // on récupère le produit sélectionné via le id et la catégorie(nom du tableau)
 exports.productSelected = (req, res ) => {
 
@@ -39,11 +37,6 @@ exports.productSelected = (req, res ) => {
 }
 
 
-
-
-
-
-
 // retourne l'ensemble  des cordage de manière aléatoire
 exports.productListRandom = (req, res ) => {
 
@@ -71,8 +64,6 @@ exports.productListRandom = (req, res ) => {
   )
 
 }
-
-
 
 
 // retourne la liste des cordages en filtant sur la base des données

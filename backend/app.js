@@ -3,6 +3,7 @@
 
 //const rateLimit = require("./middleware/rate-limit"); 
 const userRoutes = require('./routes/user');
+const clubRoutes = require('./routes/club');
 const shopRoutes = require ('./routes/shop')
 
 
@@ -82,6 +83,7 @@ app.use(express.static('public/logo'));
 // intercepte requête avec le début du nom de la route et ensuite dirige vers le routeur
 app.use('/api/user', userRoutes); 
 app.use('/api/shop', shopRoutes); 
+app.use('/api/club', clubRoutes); 
 
 
 

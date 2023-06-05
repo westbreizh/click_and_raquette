@@ -2436,16 +2436,16 @@ input {
   margin-top: 1.5rem;
   background-color: #2030ab;
 }
-.stringing-header__h1 {
-  margin: 0;
-  margin-bottom: 1rem;
+.stringing-header__title {
+  text-transform: uppercase;
+  font-size: 2.4rem;
 }
 .stringing-header__littleBitText {
   font-weight: 500;
   font-family: "Gilroy", sans-serif;
   text-align: center;
   margin: auto;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 .stringing-form__contenair {
@@ -3126,6 +3126,200 @@ input {
   .cart__summary {
     flex-basis: auto;
     border-radius: 0rem;
+  }
+}
+.order__main {
+  max-width: 122rem;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.order__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  height: calc(100vh + 7rem);
+  margin-bottom: -10rem;
+  background: url("/src/assets/balleeffet.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.order__contenair {
+  position: relative;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 3rem 0rem 3rem 0rem;
+  border-radius: 1rem;
+  background-color: #ededed;
+  color: #1c166c;
+}
+.order__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0rem;
+  font-size: 2.4rem;
+}
+.order__sub-title {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  margin: 0rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.1rem solid #dadada;
+}
+.order__sub-contenair {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 3rem 0rem 3rem 0rem;
+  border-radius: 1rem;
+  background-color: #ededed;
+  color: #1c166c;
+}
+.order__contenair-infos {
+  flex-basis: 55%;
+  padding: 1rem;
+  height: min-content;
+  padding: 0rem;
+}
+.order__contenair-info {
+  background-color: white;
+  border: 0.1rem solid #dadada;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: min-content;
+  margin-bottom: 2rem;
+}
+.order__contenair-info-button {
+  background-color: #ededed;
+  border: 0.1rem solid #ededed;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: min-content;
+  margin-bottom: 2rem;
+}
+.order__contenair-cart {
+  border: 0.1rem solid #dadada;
+  border-radius: 1rem;
+  background-color: white;
+  flex-basis: 35%;
+  padding: 1rem;
+  height: min-content;
+}
+.order__little-bit-text {
+  margin-top: 0.8rem;
+}
+
+.order-cart {
+  border: 0.1rem solid #dadada;
+  border-radius: 1rem;
+  background-color: white;
+  flex-basis: 35%;
+  padding: 1rem;
+  height: min-content;
+}
+.order-cart__product-wrapper, .order-cart__product-wrapper-installation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #dadada;
+  margin-top: 0.8rem;
+}
+.order-cart__product-wrapper-instal-with-string, .order-cart__product-wrapper-installation {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #dadada;
+}
+.order-cart__image {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  border: 0.1rem solid #dadada;
+}
+.order-cart__product-info-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 1rem;
+}
+.order-cart__product-info-wrapper-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.order-cart__text-weight-uppercase {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.order-cart__product-price {
+  font-size: 1.7rem;
+  font-weight: 550;
+  min-width: 5.7rem;
+  text-align: end;
+}
+.order-cart__instal-with-string-top {
+  display: flex;
+  justify-content: space-between;
+}
+.order-cart__content-on-one-line {
+  display: flex;
+  justify-content: space-between;
+}
+.order-cart__link-to-card-product {
+  text-decoration: none;
+  margin-left: 0.2rem;
+}
+.order-cart__pose-cordage {
+  font-weight: 550;
+}
+.order-cart__cordage {
+  display: flex;
+}
+
+/* -------------------  Responsive ----------------------*/
+@media screen and (max-width: 768px) {
+  .order__main {
+    width: 100%;
+    height: min-content;
+    margin-top: 8rem;
+  }
+  .order__contenair {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border-radius: 0rem;
+    min-height: 0px;
+  }
+  .order__sub-contenair {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 0rem;
+    padding-top: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border-radius: 0rem;
+    min-height: 0px;
+  }
+  .order__contenair-infos {
+    margin-bottom: 2rem;
+  }
+  .order__contenair-cart {
+    margin-bottom: 2.5rem;
   }
 }
 

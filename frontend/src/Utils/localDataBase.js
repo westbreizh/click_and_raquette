@@ -6,25 +6,23 @@ const datasForSelectstring = [
   },
 
   {
-  options: ["Multifilament", "Monofilament", "Boyau naturel", "Co-polyester"],
-  title : "Composition",
-  fieldNameBdd: "Composition",
+    options: ["Multifilament", "Monofilament", "Boyau naturel", "Co-polyester"],
+    title : "Composition",
+    fieldNameBdd: "Composition",
   },
   {
-  options: ["Contrôle", "Puissance", "Prise d'effet", "Confort"],
-  title : "Gamme",
-  fieldNameBdd: "first_characteristic"
-
+    options: ["Contrôle", "Puissance", "Prise d'effet", "Confort"],
+    title : "Gamme",
+    fieldNameBdd: "first_characteristic"
   },
   {
-  options: ["Garniture 12m", "Bobine 200m"],
-  title : "Conditionnement",
-  fieldNameBdd: "Packaging"
+    options: ["Garniture 12m", "Bobine 200m"],
+    title : "Conditionnement",
+    fieldNameBdd: "Packaging"
   }
 ];
 
 export { datasForSelectstring };
-
 
 
 const datasForSelectsBall = [ 
@@ -68,12 +66,8 @@ export { datasForSelectsAccessories };
 
 
 const datasForSelectClub = [ 
-   
-    { value: 'TC Pont l\'abbé' },
-    { value: 'TC Penmach'},
-    { value: 'TC Quimper' },
-    
-
+  { value: 'TC Quimper' },
+  { value: 'TC Penmach'},  
 ];
 
 export { datasForSelectClub };

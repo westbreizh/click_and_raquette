@@ -92,7 +92,7 @@ export default function Stringing() {
 
         <div className="stringing-header__wrapper">
 
-          <h1 className="stringing-header__h1">
+          <h1 className="stringing-header__title">
             Commandez votre cordage!
           </h1>
 

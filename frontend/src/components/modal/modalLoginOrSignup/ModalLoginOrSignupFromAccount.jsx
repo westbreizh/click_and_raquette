@@ -1,8 +1,8 @@
 import {createPortal} from 'react-dom'
-import LoginForm from '../form/LoginForm'
+import LoginForm from '../../form/LoginForm'
 import { Link } from 'react-router-dom';
 
-export default function ModalConnexionOrSingup( props ) {
+export default function ModalLoginOrSingupFromAccount( props ) {
 
   const closeModalConnexion = props.closeModalConnexion
 

@@ -75,12 +75,11 @@ const cartSlice = createSlice({
         0
       );
       const roundedPrice = Math.round(totalPrice * 100) / 100;
-      state.totalPriceProducts = roundedPrice % 1 === 0 ?
-       parseInt(roundedPrice) : parseFloat(roundedPrice.toFixed(2));
-      state.totalPrice = state.totalPriceProducts + state.priceDelivery;
+      const formattedPrice = Number.isInteger(roundedPrice) ? roundedPrice.toFixed(0) : roundedPrice.toFixed(2).replace('.', ',');
+      state.totalPriceProducts = formattedPrice;
+      state.totalPrice = formattedPrice;
     },
-
-
+    
     // Action pour réinitialiser la valeur de clubChoice
     resetClubChoice: (state, action) => {
       state.clubChoice = action.payload;

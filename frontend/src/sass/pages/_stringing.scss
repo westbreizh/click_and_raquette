@@ -66,9 +66,9 @@
     }
   }
 
-  &__h1{
-    margin: 0;
-    margin-bottom: 1rem;
+  &__title{
+    text-transform: uppercase;
+    font-size: 2.4rem;
   }
 
   &__littleBitText{
@@ -76,7 +76,7 @@
     font-family: "Gilroy",sans-serif;
     text-align: center;
     margin: auto;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 
 }

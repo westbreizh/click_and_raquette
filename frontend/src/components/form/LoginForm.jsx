@@ -2,7 +2,6 @@ import { useState } from "react"
 import {useForm} from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useStore } from "react-redux"
-import { useNavigate } from 'react-router-dom';
 import { Input, InputAdornment, IconButton } from '@mui/material'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -45,7 +44,7 @@ export default function LoginForm( props ) {
    }
 
   const store = useStore()
-  const navigate = useNavigate();
+
 
   // gestion de l'ouverture du modale de réinitialisation du mot de passe
   const [isModalResetPasswordOpen, setModalResetPasswordOpen] = useState(false) ;
@@ -84,7 +83,7 @@ export default function LoginForm( props ) {
         store.dispatch(setUserAddress(result.userAddress));
         store.dispatch(setToken(result.token))
         closeModalConnexion();
-        navigate('/click-raquette');
+        
       }
     }
 

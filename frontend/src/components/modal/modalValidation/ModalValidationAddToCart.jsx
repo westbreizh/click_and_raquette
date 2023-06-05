@@ -66,7 +66,7 @@ export default function ModalValidationAddToCart( props) {
               voire le panier
             </Link>  
 
-            <Link to="/panier" className='btn btn-green '>
+            <Link to="/commande" className='btn btn-green '>
               commander
             </Link>  
             

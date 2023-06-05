@@ -243,7 +243,7 @@ export default function Cart() {
                 </div>
 
 
-                <Link to="/panier" className='btn btn-green btn-commander btn-cart'>
+                <Link to="/commande" className='btn btn-green btn-commander btn-cart'>
                 commander
                 </Link>  
 

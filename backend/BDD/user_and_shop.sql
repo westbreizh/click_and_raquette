@@ -26,12 +26,7 @@ CREATE TABLE
         `string_rope` int DEFAULT NULL,
         PRIMARY KEY (`id`),
         UNIQUE KEY `email` (`email`)
-
     ) ;
-
-INSERT INTO player (civilite, lastname, forename, email, password) VALUES
-          ('monsieur', 'dert' , 'der', 'herbre@egmail.fr', "defef");
-
 
 DROP TABLE IF EXISTS `address`;
 
@@ -55,14 +50,22 @@ CREATE TABLE
         `id` int NOT NULL AUTO_INCREMENT,
         `name` varchar(100) DEFAULT NULL,
         `number_player` int NOT NULL ,
-        `address_id` int DEFAULT NULL,
+        `road` varchar(100) DEFAULT NULL,
+        `city` varchar(100) DEFAULT NULL,
+        `postalCode` varchar(100) DEFAULT NULL,
         `email` varchar(255) NOT NULL,
         `Phone_number` varchar(20) DEFAULT NULL,
 
         PRIMARY KEY (`id`)
 
 
-    ) ENGINE = InnoDB AUTO_INCREMENT = 11 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+    ) ENGINE = InnoDB AUTO_INCREMENT = 0 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+
+INSERT INTO club ( name, number_player, road,city, postalCode, email, Phone_number  )VALUES
+( 'TC Quimper', 525, '131 boulevard de Créac\'h Gwen', 'Quimper', '29 000','contact@tcquimper.fr', '02 98 90 42 66'   ),
+( 'TC Penmach', 100, 'stade municipal', '29 760', 'Penmach',  '@contact...', '06 49 51 01 59' );
+
+
 
 
  DROP TABLE IF EXISTS `shop`;
