@@ -32,6 +32,7 @@ export default function Router() {
 
       <Routes >
 
+          <Route path='/click_and_raquette' element={<Home />} />
           <Route path='/click-raquette' element={<Home />} />
           <Route path='/inscription'  element = {< Signup/>} />
           <Route path='/cordez'  element = {<Stringing />} />
