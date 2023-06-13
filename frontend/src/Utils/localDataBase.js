@@ -66,8 +66,8 @@ export { datasForSelectsAccessories };
 
 
 const datasForSelectClub = [ 
-  { value: 'TC Quimper' },
-  { value: 'TC Penmach'},  
+  { value: 'Rollang Garros' },
+  { value: 'TC Penmach'},
 ];
 
 export { datasForSelectClub };

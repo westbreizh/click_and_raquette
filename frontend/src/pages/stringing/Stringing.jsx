@@ -26,6 +26,7 @@ export default function Stringing() {
     ;
     
 
+    
   //fonction asynchrone vers le backend enregistrant les choix relatifs aux cordages de  l'utilisateur
   const registerPreferencePlayer = async function (userEmail, clubChoice, stringRopeChoice, stringChoice ) {
     try{
@@ -161,10 +162,14 @@ export default function Stringing() {
 
           <div className=' rope stringing-form__section-wrapper'>
             <label className="stringing-form__label" > Choix de la tension  </label>
-
             <SelectRopeString />
-            
           </div>
+
+          <div className=' rope stringing-form__section-wrapper'>
+            <label className="stringing-form__label" > Choix de la tension  </label>
+            <SelectRopeString />
+          </div>
+
 
           <div className=" stringing-form__section-wrapper stringing-form__section-wrapper-button">
 

@@ -8,6 +8,9 @@ import DropDownSelectQuantity from '../../components/select/dropDownSelectQuanti
 import DeleteIcon from '@mui/icons-material/Delete';
 import { NavLink } from "react-router-dom"
 import ModalConnexionOrSingupFromOrder from '../../components/modal/modalLoginOrSignup/ModalLoginOrSignupFromOrder';
+import CheckoutForm from '../../stripe/CheckoutForm';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 
 
 export default function Order() {
@@ -16,6 +19,11 @@ export default function Order() {
   const clubChoice = useSelector(state => state.cart.clubChoice);
   const articletList = useSelector(state => state.cart.articletList);
   const totalPrice = useSelector(state => state.cart.totalPrice);
+
+
+  const PUBLIC_KEY = "pk_live_51NGdYqI8HrVwrRfPvO0VCSPgquB0SZOcQeifdVeXzlryvLj2gpTf6EufvCPRJ7SD1M9iCjTY7ZTwySpWtjYibzb100TJ7uXJag"
+  const stripePromise =loadStripe (PUBLIC_KEY)
+
 
 console.log(totalPrice)
 
@@ -57,21 +65,32 @@ console.log(totalPrice)
 
                 <h2 className="order__sub-title"> Retour de service </h2>
 
-                <div className="order__little-bit-text"> Dans votre club au {clubChoice}  </div>
+                <div className="order__little-bit-text"> Dans votre club : {clubChoice}  </div>
 
               </div>
 
               <div className="order__contenair-info" > 
 
-                <h2 className="order__sub-title"> Moyen de paiment </h2>
+                <h2 className="order__sub-title"> Moyen de paiement </h2>
 
               </div>
+
+
 
               <div className="order__contenair-info order__contenair-info-button" > 
-                <Link to="/panier" className='btn btn-green btn-commander btn-cart'>
-                  Je passe commande
-                </Link>  
+
+                <Elements stripe={stripePromise}>
+                  <CheckoutForm />
+                </Elements>
+
               </div>
+
+
+              
+
+
+
+
 
             </div>
 
@@ -184,6 +203,8 @@ console.log(totalPrice)
                           <div className='order-cart__product-price'>
                             <div>{parseFloat((product.price * product.quantity).toFixed(2))} €</div>
                           </div>
+
+                          
 
                         </div>
 

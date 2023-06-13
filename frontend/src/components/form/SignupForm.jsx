@@ -4,7 +4,7 @@ import { shemaInputSignup } from "../../Utils/shemaInput"
 import { Link } from "react-router-dom" 
 import { useState } from 'react'
 import { useStore } from "react-redux"
-import {connectedToggle, setUserInfo} from '../../store/userSlice'
+import {connectedToggle, setUserInfo, setToken} from '../../store/userSlice'
 import { Input, InputAdornment, IconButton } from '@mui/material'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -71,7 +71,9 @@ export default function SignupForm(props) {
         store.dispatch(connectedToggle());
         const result = await response.json();
         store.dispatch(setUserInfo(result.userInfo));
+        store.dispatch(setToken(result.token))
         showModal();
+
 
         console.log(result.userInfo)
         console.log(result.message)

@@ -5,6 +5,8 @@
 const userRoutes = require('./routes/user');
 const clubRoutes = require('./routes/club');
 const shopRoutes = require ('./routes/shop')
+const stripeRoutes = require ('./routes/stripes')
+
 
 
 
@@ -30,6 +32,8 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+
 
 
 
@@ -84,6 +88,9 @@ app.use(express.static('public/logo'));
 app.use('/api/user', userRoutes); 
 app.use('/api/shop', shopRoutes); 
 app.use('/api/club', clubRoutes); 
+app.use('/api/stripe', stripeRoutes); 
+
+
 
 
 

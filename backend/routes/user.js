@@ -24,7 +24,7 @@ router.post('/changeEmail', auth, userCtrl.changeEmail);
 router.post('/changePassword', auth, userCtrl.changePassword);
 
 
-router.delete('/:id', userCtrl.deleteUser);
+router.delete('/:id', auth, userCtrl.deleteUser);
 
 
 //router.get('/:id', userCtrl.getOneUser);
