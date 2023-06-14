@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://click-and-raquette.fr",
+  "homepage": "https://stalwart-chimera-8ff28c.netlify.app",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -64,6 +64,7 @@
     ]
   },
   "devDependencies": {
-    "@types/yup": "^0.32.0"
+    "@types/yup": "^0.32.0",
+    "netlify-cli": "^15.5.1"
   }
 }
