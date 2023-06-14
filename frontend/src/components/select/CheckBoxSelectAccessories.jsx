@@ -72,8 +72,11 @@ export default function CheckboxSelect(props) {
 
 
   // une fois sateState effectué on met à jour les données pour le backend
+
+
   useEffect(() => {
     uploadOptionsSelectForBackend();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [optionSelectedForOneCategorie]);
 
   return (
