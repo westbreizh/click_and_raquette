@@ -98,7 +98,7 @@ export default function Stringing() {
           </h1>
 
           <span className="stringing-header__littleBitText">
-            Le forfait de la pose du cordage est de 11 €.
+            Le Forfait de la pose du cordage est de 11 €.
           </span>
           <span className="stringing-header__littleBitText">
             Renseignez les différents champs ci-dessous, cliquez et commandez !
